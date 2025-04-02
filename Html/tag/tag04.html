@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--링크 이동 태그-->
+    <!--
+        a 태그 target 속성 
+        _blank : 새창
+        _self : 현재창
+        href 속성 : 이동할 경로 or 링크
+        -->
+        <a href="https://www.naver.com/" target="_blank" title="네이버로 타이틀">네이버로 이동</a>
+        <br>
+        <a href="https://www.coupang.com/" target="_self" title="쿠팡맨">쿠팡으로 이동</a>
+
+        <br><br>
+
+        <!-- 현재 동일한 경로 ../-->
+        <img src="main_banner.png" alt="예시용사진"> <!--동일한 경로-->
+        
+        <img src="tagimg/introduce2.png" alt="예시사진2"> <!--하위폴더경로-->
+        
+        <img src="../../images/now.png" alt="예시사진3"> <!--상위 다른 경로-->
+
+        <br>
+        <a href="https://www.coupang.com/" target="_self" title="쿠팡맨">
+            <img src="../../images/now.png" alt="예시사진3">
+        </a>
+
+        <img src="https://cdn.pixabay.com/photo/2024/01/28/22/27/sculpture-8538468_960_720.jpg">
+</body>
+</html>
