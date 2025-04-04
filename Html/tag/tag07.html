@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--암묵적인 방법-->
+    <label>패티추가<input type="checkbox"></label>
+    <label>치즈추가<input type="checkbox"></label>
+    <label>피클추가<input type="checkbox"></label>
+
+    <br><br>
+
+    <!--명시적인 방법-->
+    <label for="Add_shot">샷 추가</label>   <input type="checkbox" id="Add_shot">
+    <label for="Add_ice">얼음 추가</label> <input type="checkbox" id="Add_ice">
+    <label for="Add_syrup">시럽 추가</label> <input type="checkbox" id="Add_syrup">
+
+    <br><br>
+
+    <fieldset>
+        <legend>사이즈 선택</legend>
+    <label>족발 소<input type="radio"></label>
+    <label>족발 중<input type="radio"></label>
+    <label>족발 대<input type="radio" checked></label>
+    </fieldset>
+
+    <br><br>
+    <textarea readonly>다중 텍스트 입력 공간</textarea>
+    <!--text와의 차이는 text는 한줄-->
+
+    <br><br>
+
+    <select multiple size="6"> <!--선택형 박스-->
+        <optgroup label="햄버거">
+            <option>싸이버거</option>
+            <option>휠렛버거</option>
+            <option>치즈버거</option>
+        </optgroup>
+        <optgroup label="면류">
+            <option selected>라면</option>
+            <option>냉면</option>
+            <option>쫄면</option>
+        </optgroup>
+    </select>
+
+    <br><br>
+
+    <input type="button" value="인풋버튼">
+    <input type="submit" value="인풋submit버튼">
+    <input type="reset" value="인풋reset버튼">
+    <button type="button">태그버튼</button>
+
+    <button type="button">태그submit버튼</button>
+
+
+    <br>
+    <input type="text" value="하이"> <!--텍스트가 form밖에 있으면 form안의 reset의 영향을 받지 않음-->
+    <h3>form</h3>
+    <form>
+        <input type="text" maxlength="5" placeholder="아이디 입력"> 가이드라인
+        <!-- maxlength는 단어의 갯수 제한 -->
+        <input type="reset">
+        <!-- ctrl + k + c 주석단축키 -->
+        <button>버튼</button>
+    </form>
+
+    <br><br>
+    <button>
+        <img src="../../images/now.png"> 사진버튼
+    </button>
+
+</body>
+</html>
