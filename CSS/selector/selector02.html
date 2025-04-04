@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+            <style>
+
+                p, strong{color: red;}
+                
+                /*자식 선택자*/
+                /*.top-div > p {color: blue;} /*.점을 붙은건 클래스 선택자*/
+
+                /* 하위선택자
+                .top-div p {color: rgb(148, 89, 0);}
+
+                .top-div > span {color: rgb(106, 132, 247);} */
+                
+                /*인접 형제 선택자*/
+                /*p + span {color: magenta;}*/
+
+                /*일반형제 선택자*/
+                p ~ span {color: magenta;}
+
+                /*가상 요소 선택자*/
+                #vr-p::after{
+                    content: "asdfasdfs";
+                    color: aqua;
+                }
+                /*가상 클래스 선택자*/
+                a:link{color: deeppink;} /*한번도 들어가보지 않은 사이트*/
+                a:visited{color: tomato;} /*한번이라도 들어가봤던 사이트*/
+                
+                a:hover{color: aqua;} /*마우스를 올려 놓으면*/
+                a:active{color: green;} /*마우스를 클릭한채로 있으면*/
+
+                input:focus {color: red;}
+                input:disabled{color: coral;}
+                
+                .chk:checked + span{
+                    color: red;
+                }
+                .chk:checked + label{
+                    color: red;
+                }
+
+            </style>
+    </head>
+    <body>
+        <div class="top-div">
+            <p>p1</p>
+            <p>p2</p>
+            <span>span1</span>
+            <span>span2</span>
+    
+            <div>
+                <p>p3</p>
+                <p id="vr-p">p4</p>
+                <strong>strong</strong>
+                <span>span3</span>
+            </div>
+    
+            <div>
+                <strong>strong2</strong>
+                <span>span4</span>
+            </div>
+    
+        </div>
+    
+        <p>p5</p>
+
+        <a href="https://www.naver.com/">네이버</a>
+        <a href="https://www.samsungsvc.co.kr/">삼성 전자 서비스</a>
+
+        <br><br>
+
+        <input type="text" value="input1 value"> <br>
+        <input type="text" value="input1 value" disabled> <br>
+
+        <input type="checkbox" class="chk"><span>출근</span><br>
+        <input type="checkbox" class="chk"><span>퇴근</span><br>
+        
+        <input type="checkbox" class="chk" id="retire"><span>조퇴</span><br>
+        <label for=""></label>
+    </body>
+</html>

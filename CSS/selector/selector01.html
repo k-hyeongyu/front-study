@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{color: blue;} /*전체선택자*/
+        
+        h2{color: aqua;}/*원하는태그만선택자 */
+
+        #select-id{color: violet;} /*아이디 선택자*/
+
+        .select-class{color: burlywood;}/*클래스 선택자*/
+
+        [target="_blank"] { color: rgb(21, 228, 83);}/*속성 선택자*/
+    </style>
+</head>
+<body>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3 id="select-id">h3</h3> <!--아이디는 한개 클래스는 묶음-->
+    <h4 class="select-class">h4</h4>
+    <h5>h5</h5>
+
+    <p>p하나</p>
+    <p class="select-class">p둘</p>
+    <p>p셋</p>
+    <p>p넷</p>
+
+    <a href="https://www.naver.com" target="_blank">네이버</a>
+    <a href="https://www.google.com" target="_self">구글</a>
+</body>
+</html>
