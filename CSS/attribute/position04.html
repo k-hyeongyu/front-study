@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                height: 4000px;
+            }
+            .box { 
+                width: 100px; height: 100px;
+            }
+            .red-box {
+                background-color: red;
+            }
+            .green-box {
+                background-color: green;
+                position: fixed;
+                top: 200px;
+                left: 300px;
+            }
+            .top-box {
+                width: 50px;
+                height: 50px;
+                position: fixed;
+                right: 50px;
+                bottom: 50px;
+                background-color: blue;
+            }
+            .navbar {
+                height: 100px;
+                background-color: lightblue;
+                position: sticky; 
+                top: 30px; /*위에서부터 px값에 들어가면 fixes*/
+            }
+        </style>
+    </head>
+    <body>        
+        <div class="box red-box">redbox</div>
+            <div class="box green-box">greenbox</div>
+            <div class="navbar">nav바</div>
+            <div class="top-box"></div>
+    </body>
+</html>

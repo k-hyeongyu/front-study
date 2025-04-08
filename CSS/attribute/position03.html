@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .box{
+                width: 200px;
+                height: 200px;
+            }
+            /*
+                position : 위치 지정(배치)
+                static : 기본 흐름(기본값)
+                relative : 흐름대로 + 위치 조정 가능
+                        (기준: 원래 자기가 있어야할 위치 기준)
+                absolute: 흐름무시 + 위치조정가능 
+                (기준 : 위치조정이 가능한 부모요소의 시작점)
+                    부모요소가 static : X
+                    부모요소가 relative : O
+                fixed : 흐름무시 + 절대좌표 위치
+                sticky : 흐름대로 + 특정 위치에 가면 fixes처럼 고정
+            */
+            .red-box{
+                background-color: red;
+                position: relative;
+                left: 100px;
+            }
+            .green-box{
+                background-color: green;
+                position: absolute;
+                left: 50px;
+                top: 50px;
+            }
+            .blue-box{
+                background-color: blue;
+                position: relative;
+            }
+            .container{
+                position: relative;
+                background-color: lightgrey;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="box red-box"></div> <!--box와 red-box사이에는 AND연산자가 생략되어있음-->
+        <div class="box green-box"></div>
+        <div class="box blue-box"></div>
+        
+        <div class="container">
+            <div class="box red-box"></div>
+            <div class="box green-box"></div>
+            <div class="box blue-box"></div>
+        </div>
+
+    </body>
+</html>
