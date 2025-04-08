@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: 0;
+        }
+        .container{
+            width: 200px;
+            background-color: lightgray;
+            position: relative;
+        }
+        .menu{
+            height: 50px;
+            text-align: center;
+            
+        }
+        .Submenu{
+            background-color: lightgreen;
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 100%;
+            display: none;
+        }
+        .item{
+            height: 50px;
+            text-align: center;
+        }
+        /*.menu:hover .Submenu{
+            display: block;
+        }*/
+        .container:hover .Submenu{
+            display: block;
+        }
+        .item:hover{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">Menu</div>
+            <div class="Submenu">
+                <div class="item">Submenu1</div>
+                <div class="item">Submenu2</div>
+                <div class="item">Submenu3</div>
+            </div>
+    </div>
+    
+</body>
+</html>
