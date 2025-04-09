@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+            animation-duration: 2s; /*애니메이션 지속시간*/
+            animation-fill-mode: both;
+            animation-iteration-count: infinite; /*반복횟수 infinite는 무한지속*/
+            animation-direction: alternate;
+        }
+        .box1{
+            animation-name: ani1;
+        }
+        .box2{
+            animation-name: ani2;
+        }
+        .box3{
+            animation-name: ani3;
+        }
+
+        .box1:hover, .box2:hover, .box3:hover{
+            animation-play-state: paused;
+        }
+        @keyframes ani1{
+            0%{
+                background-color: blue;
+                margin-left: 20px;
+            }
+            50%{
+                background-color: orange;
+                margin-left: 120px;
+            }
+            100%{
+                background-color: pink;
+                margin-left: 220px;
+            }
+        }
+        @keyframes ani2{
+            0%{
+                background-color: blue;
+                margin-top: 20px;
+            }
+            50%{
+                background-color: orange;
+                margin-top: 120px;
+            }
+            100%{
+                background-color: pink;
+                margin-top: 220px;
+            }
+        }
+        @keyframes ani3{
+            0%{
+                background-color: blue;
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+            50%{
+                background-color: orange;
+                margin-top: 100px;
+                margin-left: 100px;
+            }
+            100%{
+                background-color: pink;
+                margin-top: 200px;
+                margin-left: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">1좌우이동</div>
+    <div class="box box2">2상하이동</div>
+    <div class="box box3">우측하단 대각선</div>
+</body>
+</html>
