@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .container{
+                background-color: lightgray;
+                width: 500px;
+            }
+            .box{
+                width: 100px;
+                height: 100px;
+                transition-property: all;
+                transition-duration: 1s;
+                border: 1px solid black;
+            }
+            .red{
+                background-color: red;
+            }
+            .container:hover .red{
+                width: 400px;
+            }
+            .blue{
+                background-color:blue;
+                transition-property:background-color;
+            }
+            .container:hover .blue{
+                background-color: purple;
+            }
+            .black{
+                background-color:black;
+                left: 0;
+                position: relative;
+            }
+            .container:hover .black{
+                /* left: 200px; */
+                transform: translateX(200px)
+
+            }
+            .green{
+                background-color: green;
+            }
+            .green:hover, .orange:hover{
+                border: 10px solid red;
+            }
+            .orange{
+                background-color: orange
+            }
+            /* .container::after{
+                content: "";
+                display: block;
+                clear: both;
+            } */
+            .flex-container{
+                display: flex;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box red"></div>
+            <div class="box blue"></div>
+            <div class="box black"></div>
+            <div class="flex-container">
+                <div class="box green"></div>
+                <div class="box orange"></div>
+            </div>
+        </div>
+    </body>
+</html>
